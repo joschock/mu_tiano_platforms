@@ -682,6 +682,7 @@
 !endif
 
 [PcdsFixedAtBuild]
+  gHidPkgTokenSpaceGuid.PcdExcludedHidDevices|{0x3, 0x0, 0x0, 0x0, 0x0, 0x0}
   gEfiMdeModulePkgTokenSpaceGuid.PcdStatusCodeMemorySize|1
   gEfiMdeModulePkgTokenSpaceGuid.PcdResetOnMemoryTypeInformationChange|TRUE
   gEfiMdePkgTokenSpaceGuid.PcdMaximumGuidedExtractHandler|0x10
