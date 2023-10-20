@@ -3,13 +3,6 @@
 version = 3
 
 [[package]]
-name = "AbsolutePointer"
-version = "0.1.0"
-dependencies = [
- "r-efi",
-]
-
-[[package]]
 name = "HelloWorldRustDxe"
 version = "0.1.0"
 dependencies = [
@@ -23,6 +16,14 @@ name = "HidIo"
 version = "0.1.0"
 dependencies = [
  "r-efi",
+]
+
+[[package]]
+name = "HiiKeyboardLayout"
+version = "0.1.0"
+dependencies = [
+ "r-efi",
+ "scroll",
 ]
 
 [[package]]
@@ -45,8 +46,8 @@ dependencies = [
 name = "UefiHidDxe"
 version = "0.1.0"
 dependencies = [
- "AbsolutePointer",
  "HidIo",
+ "HiiKeyboardLayout",
  "RustAdvancedLoggerDxe",
  "RustBootServicesAllocatorDxe",
  "hidparser",
@@ -64,7 +65,7 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 [[package]]
 name = "hidparser"
 version = "0.2.0"
-source = "git+https://github.com/microsoft/mu_rust_hid.git?branch=main#829e23325fe47ec63b0e6a7de5c8e8de614f5d2d"
+source = "git+https://github.com/microsoft/mu_rust_hid.git?branch=main#e98613519a43215c668fa991fecba29140c3d6cc"
 
 [[package]]
 name = "memoffset"
@@ -76,10 +77,28 @@ dependencies = [
 ]
 
 [[package]]
-name = "r-efi"
-version = "4.2.0"
+name = "proc-macro2"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "575fc2d9b3da54adbdfaddf6eca48fec256d977c8630a1750b8991347d1ac911"
+checksum = "134c189feb4956b20f6f547d2cf727d4c0fe06722b20a0eec87ed445a97f92da"
+dependencies = [
+ "unicode-ident",
+]
+
+[[package]]
+name = "quote"
+version = "1.0.33"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
+name = "r-efi"
+version = "4.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0e244f96e03a3067f9e521d3167bd42657594cb8588c8d3a2db01545dc1af2e0"
 
 [[package]]
 name = "rustversion"
@@ -88,7 +107,44 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ffc183a10b4478d04cbbbfc96d0873219d962dd5accaff2ffbd4ceb7df837f4"
 
 [[package]]
+name = "scroll"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "04c565b551bafbef4157586fa379538366e4385d42082f255bfd96e4fe8519da"
+dependencies = [
+ "scroll_derive",
+]
+
+[[package]]
+name = "scroll_derive"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1db149f81d46d2deba7cd3c50772474707729550221e69588478ebf9ada425ae"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "spin"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
+
+[[package]]
+name = "syn"
+version = "2.0.38"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e96b79aaa137db8f61e26363a0c9b47d8b4ec75da28b7d1d614c2303e232408b"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
+name = "unicode-ident"
+version = "1.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
