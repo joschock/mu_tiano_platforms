@@ -4,7 +4,6 @@
 members = [
   "Common/MU/HidPkg/UefiHidDxe",
   "Common/MU/MsCorePkg/HelloWorldRustDxe",
-  "Common/MU/MsCorePkg/Crates/RustBootServices"
 ]
 
 # Add packages that generate libraries here
@@ -12,7 +11,6 @@ members = [
 HidIo = {path = "Common/MU/HidPkg/Crates/HidIo"}
 HiiKeyboardLayout = {path = "Common/MU/HidPkg/Crates/HiiKeyboardLayout"}
 RustAdvancedLoggerDxe = {path = "Common/MU/AdvLoggerPkg/Crates/RustAdvancedLoggerDxe"}
-RustBootServices = {path = "Common/MU/MsCorePkg/Crates/RustBootServices"}
 RustBootServicesAllocatorDxe = {path = "Common/MU/MsCorePkg/Crates/RustBootServicesAllocatorDxe"}
 RustUnitTestUefiSupport = {path = "Common/MU/MsCorePkg/Crates/RustUnitTestUefiSupport"}
 
@@ -22,3 +20,4 @@ r-efi = "4.3.0"
 rustversion = "1.0.14"
 scroll = { version = "0.11", default-features = false, features = ["derive"]}
 spin = "0.5.2"
+unimock = "0.5.5"
