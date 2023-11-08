@@ -55,6 +55,7 @@ dependencies = [
  "mockall",
  "r-efi",
  "rustversion",
+ "scroll",
 ]
 
 [[package]]
