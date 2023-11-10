@@ -1259,7 +1259,7 @@ QemuQ35Pkg/Library/ResetSystemLib/StandaloneMmResetSystemLib.inf
   #
   # HID Support
   #
-  HidPkg/UefiHidDxe/UefiHidDxe.inf
+  HidPkg/UefiHidDxeV2/UefiHidDxeV2.inf
 
   #
   # Usb Support
